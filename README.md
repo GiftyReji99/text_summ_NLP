@@ -3,12 +3,11 @@ It has two sections: one for Summarizing Text and another for the Text from URL.
 It gives summary on the Text using different NLP models such as NLTK, Spacy, Gensim and LexRank.
 
 Following are the Steps you need to follow before running the website.
-
 1. Download and Install Visual Studio Code
 https://code.visualstudio.com/
 
 2. Check Python version on Windows Terminal using
-python --version
+  python --version
 OR else Download and Install Python 3.8.10 
 https://www.python.org/ftp/python/3.8.10/python-3.8.10-amd64.exe
 (Note: If you have an earlier version, its alright
