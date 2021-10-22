@@ -1,0 +1,132 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+%}
+
+<h1 align="center">Text Summarizer</h1>
+<div class="container">
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#txt">Text</a></li>
+    <li><a data-toggle="tab" href="#lnk">Link</a></li>
+  </ul>
+  <div class="tab-content">
+    <div id="txt" class="tab-pane fade in active">
+      <form method="POST" action="/txt_summarize">
+        <textarea
+          name="tt_txt"
+          id="tt_txt"
+          class="form-control"
+          rows="8"
+          placeholder="Enter your Text ..."
+        >
+{{ctext}}</textarea
+        >
+        <br />
+        <div class="col">
+          <button type="submit" class="btn btn-success">Summarize</button>
+          <button
+            id="clear"
+            type="submit"
+            class="btn btn-danger"
+            onClick="t_clear()"
+          >
+            Clear
+          </button>
+        </div>
+      </form>
+    </div>
+    <div id="lnk" class="tab-pane fade">
+      <form method="POST" action="/lnk_summarize">
+        <div class="input-group">
+          <textarea
+            id="tt_lnk"
+            name="tt_lnk"
+            type="text"
+            class="form-control"
+            placeholder="Enter the Link..."
+            rows="1"
+          >
+{{ dtext }}</textarea
+          >
+        </div>
+        <br />
+        <div class="col">
+          <button type="submit" class="btn btn-success">Summarize</button>
+          <button
+            id="link_clear"
+            type="submit"
+            class="btn btn-danger"
+            onClick="l_clear()"
+          >
+            Clear
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<br />
+
+<div class="container">
+  <h2>Summary</h2>
+  <ul class="nav nav-tabs navbar-collapse">
+    <li class="active"><a data-toggle="tab" href="#spacy">Spacy</a></li>
+    <li><a data-toggle="tab" href="#lexrank">LexRank</a></li>
+    <li><a data-toggle="tab" href="#gensim">Gensim</a></li>
+    <li><a data-toggle="tab" href="#nltk">NLTK</a></li>
+
+    <!--<li><a data-toggle="tab" href="#bart">BART</a></li>
+    <li><a data-toggle="tab" href="#bert">BERT</a></li>
+    <li><a data-toggle="tab" href="#gpt2">GPT-2</a></li>-->
+  </ul>
+  <div class="tab-content">
+    <div id="spacy" class="tab-pane fade in active">
+      <textarea name="sp" id="sp" class="form-control" rows="8" readonly>
+{{ spacy_final_summary }}</textarea
+      >
+    </div>
+    <div id="lexrank" class="tab-pane fade">
+      <textarea name="lr" id="lr" class="form-control" rows="8" readonly>
+{{ lex_final_summary }}</textarea
+      >
+    </div>
+    <div id="gensim" class="tab-pane fade">
+      <textarea name="gs" id="gs" class="form-control" rows="8" readonly>
+{{ gensim_final_summary }}</textarea
+      >
+    </div>
+    <div id="nltk" class="tab-pane fade">
+      <textarea name="nn" id="nn" class="form-control" rows="8" readonly>
+{{ nltk_final_summary }}</textarea
+      >
+    </div>
+
+    <!-- <div id="bart" class="tab-pane fade">
+        <textarea
+          name="ba"
+          id="ba"
+          class="form-control"
+          rows="8"
+          readonly
+        >{{ bart_final_summary }}</textarea>
+      </div>
+      <div id="bert" class="tab-pane fade">
+        <textarea
+          name="be"
+          id="be"
+          class="form-control"
+          rows="8"
+          readonly
+        >{{ bert_final_summary }}</textarea>
+      </div>
+      <div id="gpt2" class="tab-pane fade">
+        <textarea
+          name="gpt"
+          id="gpt"
+          class="form-control"
+          rows="8"
+          readonly
+        >{{ gpt2_final_summary }}</textarea>
+      </div> -->
+  </div>
+</div>
+{% endblock %}
