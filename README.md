@@ -9,11 +9,11 @@ https://code.visualstudio.com/
 2. Check Python version on Windows Terminal using
   python --version
   
-  OR else Download and Install Python 3.8.10 
+                OR else Download and Install Python 3.8.10 
   
-  https://www.python.org/ftp/python/3.8.10/python-3.8.10-amd64.exe
+                https://www.python.org/ftp/python/3.8.10/python-3.8.10-amd64.exe
   
-  (Note: If you have an earlier version, its alright but if you have 3.9 or 3.10, the gensim model will not work and will cause error)
+                (Note: If you have an earlier version, its alright but if you have 3.9 or 3.10, the gensim model will not work and will cause error)
 
 3. Download or clone the github repository and open it on Visual Studio Code.
 
