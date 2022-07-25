@@ -27,7 +27,7 @@ https://code.visualstudio.com/
       
        pip install virtualenv
        virtualenv <env_name>
-       env_name\Scripts\activate.bat
+       env_name\Scripts\activate
  ) 
-  
+ 
 5. Run the *main.py* file and then go to http://127.0.0.1:5000/
